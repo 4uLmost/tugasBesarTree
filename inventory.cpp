@@ -1,7 +1,5 @@
 #include "inventory.h"
 
-// --- IMPLEMENTASI PRIMITIF TREE ---
-
 void createNode(infotype X, adrNode &P) {
     P = new Node;
     P->info = X;
@@ -68,8 +66,6 @@ void deleteTree(adrNode P) {
     delete P;
 }
 
-// --- IMPLEMENTASI TRAVERSAL ---
-
 void printTree(adrNode root, int depth) {
     if (root == NULL) return;
 
@@ -109,8 +105,6 @@ void printPostOrder(adrNode root) {
     cout << root->info.name << " -> ";
 }
 
-// --- IMPLEMENTASI FITUR UNIK ---
-
 int countTotalAssetStock(adrNode root) {
     if (root == NULL) return 0;
 
@@ -139,8 +133,6 @@ int countNodes(adrNode root) {
     return 1 + countNodes(root->firstChild) + countNodes(root->nextSibling);
 }
 
-// --- IMPLEMENTASI FUNGSI BANTUAN ---
-
 void clearBuffer() {
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
@@ -149,3 +141,4 @@ void waitForEnter() {
     cout << "\nTekan Enter untuk kembali ke menu...";
     cin.get();
 }
+
