@@ -2,20 +2,16 @@
 #include "inventory.h"
 
 int main() {
-    // 1. Inisialisasi Root
     adrNode root = NULL;
     infotype data;
 
     data.name = "Inventaris Kantor";
     data.stock = 0;
     createNode(data, root);
-
-    // 2. Data Hardcoded (Untuk Pengujian)
     adrNode loc1, loc2, loc3;
     adrNode cat1, cat2, cat3, cat4;
     adrNode item;
 
-    // Level 1: Lokasi
     data.name = "Ruang IT"; data.stock = 0;
     createNode(data, loc1); insertNode(root, loc1);
 
@@ -25,8 +21,6 @@ int main() {
     data.name = "Gudang";   data.stock = 0;
     createNode(data, loc3); insertNode(root, loc3);
 
-    // Level 2 & 3: Ruang IT
-    // Kategori Laptop
     data.name = "Laptop"; data.stock = 0;
     createNode(data, cat1); insertNode(loc1, cat1);
 
@@ -36,7 +30,6 @@ int main() {
         data.name = "Macbook Pro";     data.stock = 3;
         createNode(data, item); insertNode(cat1, item);
 
-    // Kategori Periferal
     data.name = "Periferal"; data.stock = 0;
     createNode(data, cat2); insertNode(loc1, cat2);
 
@@ -46,8 +39,6 @@ int main() {
         data.name = "Keyboard"; data.stock = 8;
         createNode(data, item); insertNode(cat2, item);
 
-    // Level 2 & 3: Pantry
-    // Kategori Elektronik
     data.name = "Elektronik"; data.stock = 0;
     createNode(data, cat3); insertNode(loc2, cat3);
 
@@ -57,8 +48,6 @@ int main() {
         data.name = "Dispenser"; data.stock = 2;
         createNode(data, item); insertNode(cat3, item);
 
-    // Level 2 & 3: Gudang
-    // Kategori Alat Tulis
     data.name = "Alat Tulis"; data.stock = 0;
     createNode(data, cat4); insertNode(loc3, cat4);
 
@@ -69,11 +58,8 @@ int main() {
         createNode(data, item); insertNode(cat4, item);
 
 
-    // 3. Menu Loop
     int choice;
     do {
-        // [REVISI] Baris cout << string(3, '\n'); SUDAH DIHAPUS DISINI
-
         cout << "\n=== MENU UTAMA SISTEM INVENTARIS ===" << endl;
         cout << "1. Tampilkan Visualisasi Tree" << endl;
         cout << "2. Traversal Pre-Order" << endl;
@@ -87,7 +73,6 @@ int main() {
         cout << "0. Keluar" << endl;
         cout << "Pilihan: ";
 
-        // Validasi Input Angka
         if (!(cin >> choice)) {
             cout << "Input harus angka!" << endl;
             cin.clear();
@@ -96,7 +81,7 @@ int main() {
             waitForEnter();
             continue;
         }
-        clearBuffer(); // Membersihkan enter sisa input pilihan
+        clearBuffer();
 
         switch (choice) {
         case 1:
@@ -178,3 +163,4 @@ int main() {
 
     return 0;
 }
+
