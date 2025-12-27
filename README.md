@@ -3,8 +3,8 @@
 Proyek Tugas Besar Struktur Data (C++) yang mengimplementasikan **General Tree** menggunakan representasi **First Child - Next Sibling**.
 
 ## 👥 Anggota Kelompok
-* **Muhammad Dhiyaul Auliyah** - 103022400046
-* **Nasywa Zahra Nailah** - 103022430005
+* **Muhammad Dhiyaul Auliyah**
+* **Nasywa Zahra Nailah**
 
 ## 🚀 Fitur
 * **Struktur Data:** General Tree (N-ary Tree).
