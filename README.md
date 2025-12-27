@@ -14,8 +14,3 @@ Proyek Tugas Besar Struktur Data (C++) yang mengimplementasikan **General Tree**
   1. Hitung Total Aset Stok.
   2. Cari Barang Terbanyak (Dominant Item).
   3. Statistik Jumlah Node.
-
-## 🛠️ Cara Menjalankan
-1. Clone repository ini.
-2. Buka file menggunakan IDE C++ (VS Code / Code::Blocks / DevC++).
-3. Compile dan Run `main.cpp`.
